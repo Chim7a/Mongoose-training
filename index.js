@@ -4,6 +4,7 @@ import "dotenv/config";
 async function connectDB() {
   try {
     await mongoose.connect(process.env.MONGO_KEY);
+    console.log("Database connection successful");
   } catch (error) {
     console.log(err);
     console.log("An error occured");
